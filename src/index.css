@@ -28,16 +28,28 @@ a:hover {
   color: #000;
 }
 
+button {
+  background-color: #00000000;
+  border: none;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+hr {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 1440px;
 }
 
-.header {
-  background-color: aliceblue;
-}
-
 .header-contacts {
+  position: relative;
   padding: 10px 40px;
   display: flex;
   justify-content: space-between;
@@ -47,4 +59,20 @@ a:hover {
   margin: auto 0;
   display: flex;
   gap: 40px;
+}
+
+.header-nav {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-nav-items {
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav__item {
+  margin: auto;
+  padding: 0;
 }

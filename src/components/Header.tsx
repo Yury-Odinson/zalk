@@ -1,6 +1,6 @@
 export const Header = () => {
     return (
-        <header className="header">
+        <header>
             <div className="header-contacts">
                 <div className="header-contacts-part">
                     <a href="tel:+79001234567">
@@ -23,8 +23,15 @@ export const Header = () => {
 
                 </div>
             </div>
-            <nav>
-
+            <hr />
+            <nav className="header-nav">
+                <img src="images/icons8-fast-shipping-64.png" height={64} width={64} alt="icon" />
+                <div className="header-nav-items">
+                    <button className="header-nav__item">Главная</button>
+                    <button className="header-nav__item">Услуги</button>
+                    <button className="header-nav__item">Цены</button>
+                    <button className="header-nav__item">Контакты</button>
+                </div>
             </nav>
         </header>
     )
