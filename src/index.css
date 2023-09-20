@@ -36,11 +36,13 @@ button {
   cursor: pointer;
 }
 
-hr {
+.hr {
   position: absolute;
   left: 0;
+  right: 0;
   width: 100%;
-  height: 2px;
+  height: 1px;
+  background-color: #00000041;
 }
 
 .wrapper {
@@ -68,11 +70,31 @@ hr {
 }
 
 .header-nav-items {
-  display: flex;
-  gap: 20px;
+  margin: auto 0;
 }
 
-.header-nav__item {
-  margin: auto;
-  padding: 0;
+@media only screen and (max-width: 690px) {
+
+  .hr,
+  .header-contacts {
+    display: none;
+  }
+
+}
+
+
+@media only screen and (max-width: 500px) {
+
+  .header-contacts__item {
+    display: block;
+  }
+
+  .header-nav {
+    justify-content: center;
+  }
+
+  .header-nav__image {
+    display: none;
+  }
+
 }
