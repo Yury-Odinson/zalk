@@ -1,15 +1,21 @@
+import { Button, ButtonGroup } from "@mui/material"
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone"
+import MailOutlineIcon from "@mui/icons-material/MailOutline"
+
 export const Header = () => {
     return (
         <header>
             <div className="header-contacts">
                 <div className="header-contacts-part">
-                    <a href="tel:+79001234567">
-                        <img src="images/icons8-phone-50.png" height={20} width={20} alt="phone" />
-                        +375 (25) 123-45-67
+
+                    <a className="header-contacts__item" href="tel:+79001234567">
+                        <LocalPhoneIcon />
+                        <span className="header-contacts__itemText">+375 (25) 123-45-67</span>
                     </a>
-                    <a href="mailto:blablabla@bla.com">
-                        <img src="images/icons8-mail-48.png" height={20} width={20} alt="mail" />
-                        blablabla@bla.com
+                    <a className="header-contacts__item" href="mailto:blablabla@bla.com">
+                        <MailOutlineIcon />
+                        <span className="header-contacts__itemText">blablabla@bla.com</span>
+                        
                     </a>
                 </div>
                 <div className="header-contacts-part">
@@ -23,14 +29,16 @@ export const Header = () => {
 
                 </div>
             </div>
-            <hr />
+            <div className="hr" />
             <nav className="header-nav">
-                <img src="images/icons8-fast-shipping-64.png" height={64} width={64} alt="icon" />
+                <img className="header-nav__image" src="images/icons8-fast-shipping-64.png" height={64} width={64} alt="icon" />
                 <div className="header-nav-items">
-                    <button className="header-nav__item">Главная</button>
-                    <button className="header-nav__item">Услуги</button>
-                    <button className="header-nav__item">Цены</button>
-                    <button className="header-nav__item">Контакты</button>
+                    <ButtonGroup variant="text" aria-label="outlined primary button group">
+                        <Button>Главная</Button>
+                        <Button>Услуги</Button>
+                        <Button>Цены</Button>
+                        <Button>Контакты</Button>
+                    </ButtonGroup>
                 </div>
             </nav>
         </header>
